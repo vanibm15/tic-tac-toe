@@ -1,22 +1,27 @@
 package com.bridgelabz;
 
+import java.util.Scanner;
+
 public class TicTacToe {
-    public static void main(String[] args) {
-        char[] board = cboard();
+    static void input() {
+        System.out.println("enter x &y as input");
+        Scanner sc = new Scanner(System.in);
+        char input = sc.next().charAt(0);
+        if (input == 'x') {
+            System.out.println("the value is x");
+        } else if (input == '0') {
+            System.out.println("the value is o");
+        } else {
+            System.out.println("enter a valid in");
+        }
+
 
     }
 
-    private  static char[] cboard() {
-           char[] cboard;
-        {
-            char[] board = new char[10];
-            int i;
-            for (i = 0; i <= board.length; i++)
-            {
-                board[i]='c';
 
-            }
-            return board;
-        }
+    public static void main(String[] args) {
+        input();
     }
 }
+
+
